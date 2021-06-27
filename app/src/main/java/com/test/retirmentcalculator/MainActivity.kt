@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                 if (retirementAge <= currentAge) {
                     Analytics.trackEvent("wrong_age")
                 }
+                findViewById<TextView>(R.id.resultTextView).text  = "At this $interestRate your Saving is $monthlySaving"
             } catch (ex: Exception) {
                 Analytics.trackEvent(ex.message)
             }
